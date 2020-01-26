@@ -1,0 +1,15 @@
+{
+  "name": "@mrothnet/textfile",
+  "version": "0.1.0",
+  "description": "Reading and writing UTF-8 encoded textfiles",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": {
+    "name": "Michael Roth",
+    "email": "mail@mroth.net"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.5.0"
+  }
+}
