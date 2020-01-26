@@ -8,6 +8,11 @@
     "name": "Michael Roth",
     "email": "mail@mroth.net"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github/mrothNET/textfile.js.git"
+  },
+  "homepage": "https://github/mrothNET/textfile.js",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^13.5.0"
