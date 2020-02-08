@@ -111,7 +111,7 @@ Pull requests, patches, emails, and issues are welcomed!
 
 ## Author
 
-- [Michael Roth](https://mroth.net/) <[<mail@mroth.net>]>(mailto:mail@mroth.net)
+- [Michael Roth](https://mroth.net/) <[<mail@mroth.net>](mailto:mail@mroth.net)>
 
 ## License
 
