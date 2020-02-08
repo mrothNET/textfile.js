@@ -74,7 +74,7 @@ await writeTextFile("path/filename.txt", "New file content");
 await appendTextFile("path/filename.txt", "This line will be appended\n");
 ```
 
-## Callback API
+### Callback API
 
 ```javascript
 const {
@@ -85,20 +85,22 @@ const {
 } = require("@mrothnet/textfile");
 
 // Read UTF-8 encoded text file
-readTextFile("path/filename.txt", (err, content) => {
+readTextFile("path/filename.txt", (error, content) => {
   // ...
 });
 
 // Create new text file (fails if file already exits)
-createTextFile("path/filename.txt", "Hello, World!");
+createTextFile("path/filename.txt", "Hello, World!", error => {
+  // ...
+});
 
 // Replace or create text file
-writeTextFile("path/filename.txt", "New file content", err => {
+writeTextFile("path/filename.txt", "New file content", error => {
   // ...
 });
 
 // Append to existing file or create new one
-appendTextFile("path/filename.txt", "This line will be appended\n", err => {
+appendTextFile("path/filename.txt", "This line will be appended\n", error => {
   // ...
 });
 ```
@@ -109,7 +111,7 @@ Pull requests, patches, emails, and issues are welcomed!
 
 ## Author
 
-- [Michael Roth](https://mroth.net/) [<<mail@mroth.net>>](mailto:mail@mroth.net)
+- [Michael Roth](https://mroth.net/) <[<mail@mroth.net>]>(mailto:mail@mroth.net)
 
 ## License
 
