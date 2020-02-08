@@ -1,10 +1,10 @@
 # Reading and writing UTF-8 encoded text files
 
-More descriptive reading and saving of text files made simple:
+Makes reading and saving text files simple and more descriptive:
 
 - Encoding is always UTF-8.
-- Synchronous and asynchronous functions.
-- Typescript support.
+- Synchronous and asynchronous API.
+- Typescript supported.
 
 Differentiates between:
 
@@ -41,12 +41,12 @@ const {
 // Read UTF-8 encoded text file
 const content = readTextFileSync("path/filename.txt");
 
-// Create new text file (fails if file already exits)
+// Create new text file (fails if file already exists)
 createTextFileSync("path/filename.txt", "Hello, World!");
 
 // Replace or create text file
 writeTextFileSync("path/filename.txt", "New file content");
-#
+
 // Append to existing file or create new one
 appendTextFileSync("path/filename.txt", "This line will be appended\n");
 ```
@@ -64,7 +64,7 @@ const {
 // Read UTF-8 encoded text file
 const content = await readTextFile("path/filename.txt");
 
-// Create new text file (fails if file already exits)
+// Create new text file (fails if file already exists)
 await createTextFile("path/filename.txt", "Hello, World!");
 
 // Replace or create text file
@@ -89,7 +89,7 @@ readTextFile("path/filename.txt", (error, content) => {
   // ...
 });
 
-// Create new text file (fails if file already exits)
+// Create new text file (fails if file already exists)
 createTextFile("path/filename.txt", "Hello, World!", error => {
   // ...
 });
