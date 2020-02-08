@@ -1,8 +1,17 @@
 {
   "name": "@mrothnet/textfile",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Reading and writing UTF-8 encoded textfiles",
-  "keywords": [ "utf-8", "utf8", "text", "read", "write", "append", "create", "file"],
+  "keywords": [
+    "utf-8",
+    "utf8",
+    "text",
+    "read",
+    "write",
+    "append",
+    "create",
+    "file"
+  ],
   "main": "index.js",
   "types": "index.d.ts",
   "author": {
