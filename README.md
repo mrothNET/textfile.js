@@ -6,7 +6,7 @@ More descriptive reading and saving of text files made simple:
 - Synchronous and asynchronous functions.
 - Typescript support.
 
-## Differentiates
+Differentiates between:
 
 Read
 : File must exists to be read.
