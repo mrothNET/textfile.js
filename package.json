@@ -28,7 +28,5 @@
     "index.js",
     "index.d.ts"
   ],
-  "dependencies": {
-    "@types/node": "^13.5.0"
-  }
+  "dependencies": {}
 }
