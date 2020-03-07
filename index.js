@@ -13,24 +13,24 @@ function readTextFileSync(path) {
 }
 
 function writeSync(opts) {
-  return (path, data, { mode } = {}) => {
-    writeFileSync(path, data, { mode, ...opts });
+  return (path, text, { mode } = {}) => {
+    writeFileSync(path, text, { mode, ...opts });
   };
 }
 
 function readTextFile(path) {
   return new Promise((resolve, reject) => {
-    readFile(path, utf8opts, (error, data) => {
+    readFile(path, utf8opts, (error, text) => {
       if (error) reject(error);
-      else resolve(data);
+      else resolve(text);
     });
   });
 }
 
 function write(opts) {
-  return (path, data, { mode } = {}) => {
+  return (path, text, { mode } = {}) => {
     return new Promise((resolve, reject) => {
-      writeFile(path, data, { mode, ...opts }, error => {
+      writeFile(path, text, { mode, ...opts }, error => {
         if (error) reject(error);
         else resolve();
       });
