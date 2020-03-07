@@ -20,11 +20,13 @@ Write
 Append
 : File to be written may exists already and content is appended in case.
 
+
 ## Install
 
 |               npm                |             yarn              |
 | :------------------------------: | :---------------------------: |
 | `npm install @mrothnet/textfile` | `yarn add @mrothnet/textfile` |
+
 
 ## Usage
 
@@ -50,8 +52,7 @@ writeTextFileSync("path/filename.txt", "New file content");
 // Append to existing file or create new one
 appendTextFileSync("path/filename.txt", "This line will be appended\n");
 ```
-
-### Promise API
+### Asynchronous API (Promise)
 
 ```javascript
 const {
@@ -74,44 +75,15 @@ await writeTextFile("path/filename.txt", "New file content");
 await appendTextFile("path/filename.txt", "This line will be appended\n");
 ```
 
-### Callback API
-
-```javascript
-const {
-  readTextFile,
-  createTextFile,
-  writeTextFile,
-  appendTextFile
-} = require("@mrothnet/textfile");
-
-// Read UTF-8 encoded text file
-readTextFile("path/filename.txt", (error, content) => {
-  // ...
-});
-
-// Create new text file (fails if file already exists)
-createTextFile("path/filename.txt", "Hello, World!", error => {
-  // ...
-});
-
-// Replace or create text file
-writeTextFile("path/filename.txt", "New file content", error => {
-  // ...
-});
-
-// Append to existing file or create new one
-appendTextFile("path/filename.txt", "This line will be appended\n", error => {
-  // ...
-});
-```
-
 ## Contributing
 
 Pull requests, patches, emails, and issues are welcomed!
 
+
 ## Author
 
 - [Michael Roth](https://mroth.net/) <[<mail@mroth.net>](mailto:mail@mroth.net)>
+
 
 ## License
 
