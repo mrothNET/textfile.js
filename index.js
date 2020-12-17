@@ -12,6 +12,10 @@ function readTextFileSync(path) {
   return readFileSync(path, utf8opts);
 }
 
+const writeTextFileSync = writeSync(writeOpts);
+const appendTextFileSync = writeSync(appendOpts);
+const createTextFileSync = writeSync(createOpts);
+
 function writeSync(opts) {
   return (path, text, { mode } = {}) => {
     writeFileSync(path, text, { mode, ...opts });
@@ -27,10 +31,14 @@ function readTextFile(path) {
   });
 }
 
+const writeTextFile = write(writeOpts);
+const appendTextFile = write(appendOpts);
+const createTextFile = write(createOpts);
+
 function write(opts) {
   return (path, text, { mode } = {}) => {
     return new Promise((resolve, reject) => {
-      writeFile(path, text, { mode, ...opts }, error => {
+      writeFile(path, text, { mode, ...opts }, (error) => {
         if (error) reject(error);
         else resolve();
       });
@@ -38,16 +46,24 @@ function write(opts) {
   };
 }
 
+function editTextFileSync(path, editor) {
+  writeTextFileSync(path, editor(readTextFileSync(path)));
+}
+
+async function editTextFile(path, editor) {
+  return writeTextFile(path, await editor(await readTextFile(path)));
+}
+
 module.exports = {
   readTextFileSync,
-
-  writeTextFileSync: writeSync(writeOpts),
-  appendTextFileSync: writeSync(appendOpts),
-  createTextFileSync: writeSync(createOpts),
+  writeTextFileSync,
+  appendTextFileSync,
+  createTextFileSync,
+  editTextFileSync,
 
   readTextFile,
-
-  writeTextFile: write(writeOpts),
-  appendTextFile: write(appendOpts),
-  createTextFile: write(createOpts)
+  writeTextFile,
+  appendTextFile,
+  createTextFile,
+  editTextFile,
 };

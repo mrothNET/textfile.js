@@ -1,15 +1,11 @@
-type PathType = string | Buffer | URL;
+export function readTextFileSync(path: string): string;
+export function writeTextFileSync(path: string, data: string, options?: { mode?: number }): void;
+export function appendTextFileSync(path: string, data: string, options?: { mode?: number }): void;
+export function createTextFileSync(path: string, data: string, options?: { mode?: number }): void;
+export function editTextFileSync(path: string, editor: (text: string) => string): void;
 
-type OptionsType = { mode?: number };
-
-export function readTextFileSync(path: PathType): string;
-
-export function writeTextFileSync(path: PathType | number, data: string, options?: OptionsType): void;
-export function appendTextFileSync(path: PathType, data: string, options?: OptionsType): void;
-export function createTextFileSync(path: PathType, data: string, options?: OptionsType): void;
-
-export function readTextFile(path: PathType): Promise<string>;
-
-export function writeTextFile(path: PathType | number, data: string, options?: OptionsType): Promise<void>;
-export function appendTextFile(path: PathType, data: string, options?: OptionsType): Promise<void>;
-export function createTextFile(path: PathType, data: string, options?: OptionsType): Promise<void>;
+export function readTextFile(path: string): Promise<string>;
+export function writeTextFile(path: string, data: string, options?: { mode?: number }): Promise<void>;
+export function appendTextFile(path: string, data: string, options?: { mode?: number }): Promise<void>;
+export function createTextFile(path: string, data: string, options?: { mode?: number }): Promise<void>;
+export function editTextFile(path: string, editor: (text: string) => Promise<string> | string): Promise<void>;
