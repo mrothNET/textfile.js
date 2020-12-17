@@ -1,6 +1,6 @@
 {
   "name": "@mrothnet/textfile",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Reading and writing UTF-8 encoded textfiles",
   "keywords": [
     "utf-8",
