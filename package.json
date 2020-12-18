@@ -10,6 +10,7 @@
     "write",
     "append",
     "create",
+    "edit",
     "file"
   ],
   "main": "index.js",

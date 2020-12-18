@@ -104,7 +104,7 @@ appendTextFileSync("path/filename.txt", "This line will be appended\n");
 const { editTextFileSync } = require("@mrothnet/textfile");
 
 // Edit an existing file (only synchronous)
-await editTextFileSync("path/filename.txt", (text) => {
+editTextFileSync("path/filename.txt", (text) => {
   return text.toUpperCase();
 });
 ```
